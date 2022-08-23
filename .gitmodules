@@ -1,0 +1,3 @@
+[submodule "Monster/vendor/spdlog"]
+	path = Monster/vendor/spdlog
+	url = https://github.com/gabime/spdlog.git

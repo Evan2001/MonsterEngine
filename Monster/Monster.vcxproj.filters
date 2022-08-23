@@ -21,15 +21,21 @@
     <ClInclude Include="src\Monster\Application.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\Monster.h">
+    <ClInclude Include="src\Monster\Monster.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\Monster\EntryPoint.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\Monster\Log.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Monster\Application.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Monster\Log.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
