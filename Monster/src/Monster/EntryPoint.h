@@ -6,10 +6,11 @@ extern Monster::Application* Monster::CreateApplication();
 
 int main(int argc, char** argv)
 {
-	// Sandbox* sandbox = new Sandbox();
 	Monster::Log::Init();
-	Monster::Log::GetCoreLogger()->warn("Bunger!");
-	Monster::Log::GetClientLogger()->info("Info!");
+
+	MS_CORE_WARN("Bunger!");
+	int a = 5;
+	MS_INFO("Info! Var={0}", a);
 
 	auto app = Monster::CreateApplication();
 	app->Run();

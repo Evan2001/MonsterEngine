@@ -1,4 +1,5 @@
 #include "Log.h"
+#include "../precomp.h"
 #include "spdlog/sinks/stdout_color_sinks.h"
 
 namespace Monster

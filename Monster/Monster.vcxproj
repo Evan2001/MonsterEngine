@@ -58,6 +58,8 @@
       <PreprocessorDefinitions>MS_PLATFORM_WINDOWS;MS_BUILD_DLL;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>$(SolutionDir)Monster\vendor\spdlog\include;</AdditionalIncludeDirectories>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>precomp.h</PrecompiledHeaderFile>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -73,6 +75,8 @@
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>$(SolutionDir)Monster\vendor\spdlog\include;</AdditionalIncludeDirectories>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>precomp.h</PrecompiledHeaderFile>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -82,15 +86,24 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="src\Monster\Events\ApplicationEvent.h" />
+    <ClInclude Include="src\Monster\Events\Events.h" />
+    <ClInclude Include="src\Monster\Events\KeyEvent.h" />
+    <ClInclude Include="src\Monster\Events\MouseEvent.h" />
     <ClInclude Include="src\Monster\Log.h" />
     <ClInclude Include="src\Monster\Monster.h" />
     <ClInclude Include="src\Monster\Application.h" />
     <ClInclude Include="src\Monster\Core.h" />
     <ClInclude Include="src\Monster\EntryPoint.h" />
+    <ClInclude Include="src\precomp.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Monster\Log.cpp" />
     <ClCompile Include="src\Monster\Application.cpp" />
+    <ClCompile Include="src\precomp.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
